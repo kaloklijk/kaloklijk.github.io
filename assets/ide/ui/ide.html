@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <?php 
+    include 'app/complier.php';
+    ?>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=C, initial-scale=1.0">
+    <title>Online Codeboard by LiKaLok</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header"> Codeboard Online IDE by Li Ka Lok</div>
+    <div class="control-panel">
+    </div>
+    <!-- editor -->
+    <div class="editor" id="editor"></div>
+    <!-- button -->
+    <div class="button-container">
+        Select Language:
+        &nbsp; &nbsp;
+        <select id="languages" class=""languages onchange="change_language()">
+        <option value="c">C</option>
+        <option value="cpp">C++</option>
+        <option value="python">Python</option>
+        <option value="php"> PHP </option>
+        <option value="node"> Node JS </option>
+        </select>
+        <!-- run the code -->
+        <button class="btn" onclick="executeCode()"> Run </button>
+    </div>
+    <div class="header"> Online IDE output </div>
+    <!-- cmd -->
+    <div class="output"></div>
+    <!-- script -->
+    <script src="js/ide.js"></script>
+    <script src="js/lib/ace.js"></script>
+    <script src="js/lib/theme-monokai.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>
