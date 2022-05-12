@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/python_data.css"/>
+  <link rel="stylesheet" href="http://pyscript.net/alpha/pyscript.css"/>
+  <script defer src="http://pyscript.net/alpha/pyscript.js"></script>
+  <title>Document</title>
+</head>
+<body>
+  <py-env>
+- numpy
+- pandas
+- matplotlib
+  </py-env>
+    <div id="h" class="h">
+      <h1>python tutorial on web Data_analysis</h1>
+    </div>
+      <div id="py-repl">
+        <h2><strong>
+          Read csv file in python using pandas
+        </strong></h2>
+
+        <py-repl>
+'''run
+shift + enter to run the prorgram
+'''
+from pandas import *
+from numpy import *
+from matplotlib.pyplot import *
+from pyodide.http import open_url
+df = read_csv(open_url('https://kaloklijk.github.io/assets/telco_churn.csv'))
+df.head(100)
+        </py-repl>
+        <br><br><br>
+        <h2><strong>
+          read top and bottom 10 columns 
+        </strong></h2>
+        <py-repl>
+df.head(10)
+df.tail(10)
+        </py-repl>
+
+      </div>
+    </div>
+</body>
+</html>
