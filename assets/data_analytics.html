@@ -32,13 +32,22 @@ from numpy import *
 from matplotlib.pyplot import *
 from pyodide.http import open_url
 df = read_csv(open_url('https://kaloklijk.github.io/assets/telco_churn.csv'))
-df.head(100)
+df.head()
         </py-repl>
         <br><br><br>
         <h2><strong>
           read top and bottom 10 columns 
         </strong></h2>
         <py-repl>
+'''run
+shift + enter to run the prorgram
+'''
+from pandas import *
+from numpy import *
+from matplotlib.pyplot import *
+from pyodide.http import open_url
+df = read_csv(open_url('https://kaloklijk.github.io/assets/telco_churn.csv'))
+df.head()
 df.head(10)
 df.tail(10)
         </py-repl>
